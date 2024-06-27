@@ -1,0 +1,1 @@
+-Leitura guia: https://muriloalvesdev.medium.com/consumindo-a-api-postmon-gratuita-utilizando-oresttemplate-e-spring-boot-670fe6ceb86f
