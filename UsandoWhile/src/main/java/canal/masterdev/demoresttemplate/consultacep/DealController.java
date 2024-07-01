@@ -10,19 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("consomeAPI")
+@RequestMapping("deal")
 @CrossOrigin(origins="*", maxAge = 3600)
-public class ConsomeAPIController {
+public class DealController {
 	
 	@Autowired
-	private ConsomeAPIService consomeService;
+	private DealService consomeService;
 	
-	@GetMapping("{page}/produto")
-	public List<Root> listarProduto(@PathVariable int page){
-		return consomeService.consumirApiProduto(page);
-	}
-	
-	@GetMapping("{page}/negocio")
+	@GetMapping("{page}")
 	public List<RootDeal> listarDeal(@PathVariable int page){
 		return consomeService.consumirApiNegocio(page);
 	}

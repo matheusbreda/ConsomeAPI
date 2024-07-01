@@ -10,20 +10,17 @@ import org.springframework.web.client.RestTemplate;
 
 
 @Service
-public class ConsomeAPIService {
+public class ProductService {
 
 	
 	@Autowired
 	private ResultRepository resultRepository;
-	private ResultDealRepository resultDealRepository;
 	
 	@Autowired
 	private TimeRepository timeRepository;
-	private TimeDealRepository timeDealRepository;
 	
 	@Autowired
 	private RootRepository rootRepository;
-	private RootDealRepository rootDealRepository;
 	
 	public List<Root> consumirApiProduto(@PathVariable("page") int page) {
 		List<Root> allResults = new ArrayList<>();
@@ -34,7 +31,7 @@ public class ConsomeAPIService {
 		RestTemplate restTemplate = new RestTemplate();
 		RootDTO resultAPI = restTemplate.getForObject(String.format("https://syma.bitrix24.com.br/rest/71/1uqgro6xgaz5v5rg/crm.product.list.json?&start=%s", page), RootDTO.class);
 		
-		System.out.println("Começando!");
+	
 		
 		if(resultAPI != null) {
 			Time time = new Time();
@@ -70,54 +67,6 @@ public class ConsomeAPIService {
 		 page += pageSize;
     }
 	     
-	     System.out.println("");
-		
-		return allResults;
-	}
-	
-	public List<RootDeal> consumirApiNegocio(@PathVariable("page") int page) {
-		List<RootDeal> allResults = new ArrayList<>();
-		 int limit = 20000;
-	     int pageSize = 50;
-	     while (page <= limit) {
-	    	 
-		RestTemplate restTemplate = new RestTemplate();
-		RootDealDTO resultAPI = restTemplate.getForObject(String.format("https://syma.bitrix24.com.br/rest/71/7m2mw3ab8l60j7dc/crm.deal.list.json?&start=%s", page), RootDealDTO.class);
-		
-		if(resultAPI != null) {
-			TimeDeal time = new TimeDeal();
-			time.setDateFinish(resultAPI.getTime().getDateFinish());
-			time.setDateStart(resultAPI.getTime().getDateStart());
-			time.setStart(resultAPI.getTime().getStart());
-			
-			timeDealRepository.save(time);
-			
-		}
-		
-		if (resultAPI != null && resultAPI.result != null) {
-		    for (ResultDeal apiResult : resultAPI.result) {
-		        ResultDeal result = new ResultDeal();
-		        result.setID(apiResult.getID());
-		        result.setTITLE(apiResult.getTITLE());
-		        result.setTYPE_ID(apiResult.getTYPE_ID());
-		        result.setSTAGE_ID(apiResult.getSTAGE_ID());
-		        
-		        resultDealRepository.save(result);
-		    }
-		}
-		
-		if(resultAPI != null) {
-			RootDeal root = new RootDeal();
-			root.setResult(resultAPI.getResult());
-			root.setNext(resultAPI.getNext());
-			root.setTime(resultAPI.getTime());
-			
-			rootDealRepository.save(root);
-			allResults.add(root);
-		}
-		
-		 page += pageSize;
-    }
 		
 		return allResults;
 	}
