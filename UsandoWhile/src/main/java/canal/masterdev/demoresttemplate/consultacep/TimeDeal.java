@@ -12,7 +12,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Time implements Serializable{
+public class TimeDeal implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -28,4 +28,5 @@ public class Time implements Serializable{
     @JsonProperty("operating_reset_at") 
     public int operatingResetAt;
     public double operating;
+
 }

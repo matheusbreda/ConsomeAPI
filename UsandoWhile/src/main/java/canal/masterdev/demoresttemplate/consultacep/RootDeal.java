@@ -14,23 +14,20 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Root implements Serializable{
+public class RootDeal implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
 	@OneToMany
-    public List<Result> result;
+    public List<ResultDeal> result;
     
     public int next;
     public int total;
     
    @OneToOne
-    public Time time;
-
- 
+    public TimeDeal time;
 }
-

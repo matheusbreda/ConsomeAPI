@@ -17,9 +17,13 @@ public class ConsomeAPIController {
 	@Autowired
 	private ConsomeAPIService consomeService;
 	
-	@GetMapping("{page}")
-	public List<Root> listar(@PathVariable int page){
-		return consomeService.consumirApi(page);
+	@GetMapping("{page}/produto")
+	public List<Root> listarProduto(@PathVariable int page){
+		return consomeService.consumirApiProduto(page);
 	}
 	
+	@GetMapping("{page}/negocio")
+	public List<RootDeal> listarDeal(@PathVariable int page){
+		return consomeService.consumirApiNegocio(page);
+	}
 }
