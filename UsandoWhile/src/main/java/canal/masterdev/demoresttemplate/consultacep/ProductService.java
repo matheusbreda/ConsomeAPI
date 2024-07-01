@@ -64,9 +64,6 @@ public class ProductService {
 		        result.setDESCRIPTION_TYPE(apiResult.getDESCRIPTION_TYPE());
 		        result.setVAT_INCLUDED(apiResult.getVAT_INCLUDED());
 
-
-
-		        
 		        resultRepository.save(result);
 		    }
 		}
