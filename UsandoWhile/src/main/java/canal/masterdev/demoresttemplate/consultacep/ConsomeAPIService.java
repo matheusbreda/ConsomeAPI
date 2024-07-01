@@ -13,8 +13,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class ConsomeAPIService {
 
-	@Value("${url.bitrix}")
-	private String url;
+	
 	
 	@Autowired
 	private ResultRepository resultRepository;

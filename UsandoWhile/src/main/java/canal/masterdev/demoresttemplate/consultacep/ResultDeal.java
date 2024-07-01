@@ -24,6 +24,10 @@ public class ResultDeal implements Serializable {
     public String tYPE_ID;
     @JsonProperty("STAGE_ID") 
     public String sTAGE_ID;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> e27b9148aebacd8149238321d0c15413548a9423
     @JsonProperty("CURRENCY_ID") 
     public String cURRENCY_ID;
     @JsonProperty("OPPORTUNITY") 
@@ -32,10 +36,22 @@ public class ResultDeal implements Serializable {
     public String iS_MANUAL_OPPORTUNITY;
     @JsonProperty("TAX_VALUE") 
     public String tAX_VALUE;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> e27b9148aebacd8149238321d0c15413548a9423
     @JsonProperty("COMPANY_ID") 
     public String cOMPANY_ID;
     @JsonProperty("CONTACT_ID") 
     public String cONTACT_ID;
+<<<<<<< HEAD
+=======
+
+    @JsonProperty("BEGINDATE") 
+    public Date bEGINDATE;
+    @JsonProperty("CLOSEDATE") 
+    public Date cLOSEDATE;
+>>>>>>> e27b9148aebacd8149238321d0c15413548a9423
     @JsonProperty("ASSIGNED_BY_ID") 
     public String aSSIGNED_BY_ID;
     @JsonProperty("CREATED_BY_ID") 
@@ -48,6 +64,11 @@ public class ResultDeal implements Serializable {
     public String cLOSED;
     @JsonProperty("COMMENTS") 
     public String cOMMENTS;
+<<<<<<< HEAD
+=======
+    
+ 
+>>>>>>> e27b9148aebacd8149238321d0c15413548a9423
     @JsonProperty("CATEGORY_ID") 
     public String cATEGORY_ID;
     @JsonProperty("STAGE_SEMANTIC_ID") 
@@ -64,8 +85,20 @@ public class ResultDeal implements Serializable {
     public String sOURCE_ID;
     @JsonProperty("SOURCE_DESCRIPTION") 
     public String sOURCE_DESCRIPTION;
+<<<<<<< HEAD
     @JsonProperty("MOVED_BY_ID") 
     public String mOVED_BY_ID;
+=======
+   
+    @JsonProperty("MOVED_BY_ID") 
+    public String mOVED_BY_ID;
+    @JsonProperty("MOVED_TIME") 
+    public Date mOVED_TIME;
+    @JsonProperty("LAST_ACTIVITY_TIME") 
+    public Date lAST_ACTIVITY_TIME;
+     
+
+>>>>>>> e27b9148aebacd8149238321d0c15413548a9423
     @JsonProperty("LAST_ACTIVITY_BY") 
     public String lAST_ACTIVITY_BY;
 	
