@@ -1,7 +1,6 @@
 package canal.masterdev.demoresttemplate.consultacep;
 
 import java.io.Serializable;
-import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -25,8 +24,6 @@ public class ResultDeal implements Serializable {
     public String tYPE_ID;
     @JsonProperty("STAGE_ID") 
     public String sTAGE_ID;
-    @JsonProperty("PROBABILITY") 
-    public Object pROBABILITY;
     @JsonProperty("CURRENCY_ID") 
     public String cURRENCY_ID;
     @JsonProperty("OPPORTUNITY") 
@@ -35,38 +32,22 @@ public class ResultDeal implements Serializable {
     public String iS_MANUAL_OPPORTUNITY;
     @JsonProperty("TAX_VALUE") 
     public String tAX_VALUE;
-    @JsonProperty("LEAD_ID") 
-    public Object lEAD_ID;
     @JsonProperty("COMPANY_ID") 
     public String cOMPANY_ID;
     @JsonProperty("CONTACT_ID") 
     public String cONTACT_ID;
-    @JsonProperty("QUOTE_ID") 
-    public Object qUOTE_ID;
-    @JsonProperty("BEGINDATE") 
-    public Date bEGINDATE;
-    @JsonProperty("CLOSEDATE") 
-    public Date cLOSEDATE;
     @JsonProperty("ASSIGNED_BY_ID") 
     public String aSSIGNED_BY_ID;
     @JsonProperty("CREATED_BY_ID") 
     public String cREATED_BY_ID;
     @JsonProperty("MODIFY_BY_ID") 
     public String mODIFY_BY_ID;
-    @JsonProperty("DATE_CREATE") 
-    public Date dATE_CREATE;
-    @JsonProperty("DATE_MODIFY") 
-    public Date dATE_MODIFY;
     @JsonProperty("OPENED") 
     public String oPENED;
     @JsonProperty("CLOSED") 
     public String cLOSED;
     @JsonProperty("COMMENTS") 
     public String cOMMENTS;
-    @JsonProperty("ADDITIONAL_INFO") 
-    public Object aDDITIONAL_INFO;
-    @JsonProperty("LOCATION_ID") 
-    public Object lOCATION_ID;
     @JsonProperty("CATEGORY_ID") 
     public String cATEGORY_ID;
     @JsonProperty("STAGE_SEMANTIC_ID") 
@@ -83,26 +64,8 @@ public class ResultDeal implements Serializable {
     public String sOURCE_ID;
     @JsonProperty("SOURCE_DESCRIPTION") 
     public String sOURCE_DESCRIPTION;
-    @JsonProperty("ORIGINATOR_ID") 
-    public Object oRIGINATOR_ID;
-    @JsonProperty("ORIGIN_ID") 
-    public Object oRIGIN_ID;
     @JsonProperty("MOVED_BY_ID") 
     public String mOVED_BY_ID;
-    @JsonProperty("MOVED_TIME") 
-    public Date mOVED_TIME;
-    @JsonProperty("LAST_ACTIVITY_TIME") 
-    public Date lAST_ACTIVITY_TIME;
-    @JsonProperty("UTM_SOURCE") 
-    public Object uTM_SOURCE;
-    @JsonProperty("UTM_MEDIUM") 
-    public Object uTM_MEDIUM;
-    @JsonProperty("UTM_CAMPAIGN") 
-    public Object uTM_CAMPAIGN;
-    @JsonProperty("UTM_CONTENT") 
-    public Object uTM_CONTENT;
-    @JsonProperty("UTM_TERM") 
-    public Object uTM_TERM;
     @JsonProperty("LAST_ACTIVITY_BY") 
     public String lAST_ACTIVITY_BY;
 	
