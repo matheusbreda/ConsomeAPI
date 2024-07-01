@@ -38,6 +38,11 @@ public class ProductService {
 			time.setDateFinish(resultAPI.getTime().getDateFinish());
 			time.setDateStart(resultAPI.getTime().getDateStart());
 			time.setStart(resultAPI.getTime().getStart());
+			time.setFinish(resultAPI.getTime().getFinish());
+			time.setDuration(resultAPI.getTime().getDuration());
+			time.setProcessing(resultAPI.getTime().getProcessing());
+			time.setOperatingResetAt(resultAPI.getTime().getOperatingResetAt());
+			time.setOperating(resultAPI.getTime().getOperating());
 			
 			timeRepository.save(time);
 		}
@@ -49,6 +54,18 @@ public class ProductService {
 		        result.setNAME(apiResult.getNAME());
 		        result.setCODE(apiResult.getCODE());
 		        result.setACTIVE(apiResult.getACTIVE());
+		        result.setSORT(apiResult.getSORT());
+		        result.setXML_ID(apiResult.getXML_ID());
+		        result.setTIMESTAMP_X(apiResult.getTIMESTAMP_X());
+		        result.setDATE_CREATE(apiResult.getDATE_CREATE());
+		        result.setMODIFIED_BY(apiResult.getMODIFIED_BY());
+		        result.setCREATED_BY(apiResult.getCREATED_BY());
+		        result.setCATALOG_ID(apiResult.getCATALOG_ID());
+		        result.setDESCRIPTION_TYPE(apiResult.getDESCRIPTION_TYPE());
+		        result.setVAT_INCLUDED(apiResult.getVAT_INCLUDED());
+
+
+
 		        
 		        resultRepository.save(result);
 		    }
